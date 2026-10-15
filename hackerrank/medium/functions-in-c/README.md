@@ -1,4 +1,4 @@
-# Functions in C
+# Sum and Difference of Two Numbers
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -60,44 +60,35 @@ Note: I/O will be automatically handled.
 
 ## Solution
 
-**Language:** C++  
+**Language:** C  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-15T16:37:17.881Z  
+**Submitted:** 2026-10-15T16:36:13.291Z  
 
-```cpp
+```c
 #include <stdio.h>
-
-/*
- * This function compares four integers and returns the greatest one.
- */
-int max_of_four(int a, int b, int c, int d) {
-    int max = a;
-
-    if (b > max) {
-        max = b;
-    }
-    if (c > max) {
-        max = c;
-    }
-    if (d > max) {
-        max = d;
-    }
-
-    return max;
-}
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
 
 int main() {
-    int a, b, c, d;
+    // Declare variables: two integers and two floats
+    int int1, int2;
+    float float1, float2;
     
-    // Reads four integers from the input
-    if (scanf("%d %d %d %d", &a, &b, &c, &d) == 4) {
-        int ans = max_of_four(a, b, c, d);
-        printf("%d\n", ans);
-    }
+    // Read the inputs from standard input
+    scanf("%d %d", &int1, &int2);
+    scanf("%f %f", &float1, &float2);
+    
+    // Print the sum and difference of the integers
+    printf("%d %d\n", int1 + int2, int1 - int2);
+    
+    // Print the sum and difference of the floats, rounded to one decimal place
+    printf("%.1f %.1f\n", float1 + float2, float1 - float2);
     
     return 0;
 }
+    
 
 ```
 
